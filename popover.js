@@ -36,7 +36,7 @@
     lightboxContents.className = lightboxContents.className.replace("lightboxContent", "");
     
     const contentBackground = getComputedStyle(lightboxContents).background;
-    if (contentBackground) {
+    if (!settings.doNotCopyBackground && contentBackground) {
       lightbox.style.background = contentBackground;
     }
 
